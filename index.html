@@ -1,0 +1,711 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="theme-color" content="#0D0D0D" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>VIPFLIX - Streaming Premium</title>
+    <link rel="icon" type="image/png" href="assets/logo/logo_vipflix.png" />
+    <link rel="apple-touch-icon" href="assets/logo/logo_vipflix.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="sticky-promo-bar">
+      <div class="sticky-promo-inner">
+        <span class="sticky-promo-fire"><i class="fas fa-fire"></i></span>
+        <span class="sticky-promo-text"
+          ><strong>PRIMEIRO vitalício 2.750kz</strong>
+          <span class="sticky-promo-sep">|</span> Oferta acaba em
+          <span id="sticky-countdown" class="sticky-promo-timer"
+            >00:00:00</span
+          ></span
+        >
+        <button class="sticky-promo-btn" onclick="VipflixApp.scrollToApps()">
+          ASSINAR AGORA
+        </button>
+      </div>
+    </div>
+
+    <canvas id="particles-canvas"></canvas>
+
+    <section id="hero">
+      <div class="hero-bg-glow"></div>
+      <div class="hero-content">
+        <div class="brand" id="hero-logo">
+          <span class="brand-vip">VIP</span><span class="brand-flix">FLIX</span>
+        </div>
+        <h1 class="hero-headline">
+          Todos os streamings.<br /><span class="gold">Uma assinatura.</span>
+        </h1>
+        <p class="hero-desc">
+          +40.000 filmes, séries, esportes ao vivo, canais infantis e muito
+          mais. <strong>Primeiro vitalício só 2.750kz!</strong>
+        </p>
+        <div class="hero-promo-highlight">
+          <span class="hero-promo-old">De 17.800kz</span>
+          <span class="hero-promo-new">2.750kz</span>
+          <span class="hero-promo-label">1º vitalício</span>
+        </div>
+        <div class="hero-actions">
+          <button
+            class="btn-gold pulse-btn"
+            onclick="VipflixApp.scrollToApps()"
+          >
+            <i class="fas fa-play"></i> ASSINAR POR 2.750kz
+          </button>
+          <a href="#content-section" class="btn-ghost"
+            ><i class="fas fa-chevron-down"></i> Saiba mais</a
+          >
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><strong>40k+</strong><span>Filmes</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><strong>5k+</strong><span>Séries</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><strong>200+</strong><span>Canais</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><strong>4K</strong><span>Qualidade</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="carousel-section">
+      <div class="carousel-wrap">
+        <div class="carousel-track" id="carousel-row-1" data-direction="right">
+          <div class="c-item">
+            <img src="assets/carousel/Filme-01.webp" alt="Filme" />
+          </div>
+          <div class="c-item">
+            <img src="assets/carousel/Filme-02.webp" alt="Filme" />
+          </div>
+          <div class="c-item">
+            <img src="assets/carousel/Filme-03.webp" alt="Filme" />
+          </div>
+          <div class="c-item">
+            <img src="assets/carousel/Filme-04.webp" alt="Filme" />
+          </div>
+          <div class="c-item">
+            <img src="assets/carousel/Filme-05.webp" alt="Filme" />
+          </div>
+          <div class="c-item">
+            <img src="assets/carousel/Filme-06.webp" alt="Filme" />
+          </div>
+          <div class="c-item">
+            <img src="assets/carousel/Filme-07.webp" alt="Filme" />
+          </div>
+          <div class="c-item">
+            <img src="assets/carousel/Filme-10.webp" alt="Filme" />
+          </div>
+          <div class="c-item">
+            <img src="assets/carousel/Filme-12.webp" alt="Filme" />
+          </div>
+          <div class="c-item">
+            <img src="assets/carousel/Filme-13.webp" alt="Filme" />
+          </div>
+        </div>
+      </div>
+      <div class="carousel-wrap">
+        <div class="carousel-track" id="carousel-row-2" data-direction="left">
+          <div class="c-item">
+            <img src="assets/carousel/Serie-02.webp" alt="Série" />
+          </div>
+          <div class="c-item">
+            <img src="assets/carousel/Serie-03.webp" alt="Série" />
+          </div>
+          <div class="c-item">
+            <img src="assets/carousel/Serie-04.webp" alt="Série" />
+          </div>
+          <div class="c-item">
+            <img src="assets/carousel/Serie-07.webp" alt="Série" />
+          </div>
+          <div class="c-item">
+            <img src="assets/carousel/Serie-08.webp" alt="Série" />
+          </div>
+          <div class="c-item">
+            <img src="assets/carousel/Serie-09.webp" alt="Série" />
+          </div>
+          <div class="c-item">
+            <img src="assets/carousel/Serie-10.webp" alt="Série" />
+          </div>
+          <div class="c-item">
+            <img src="assets/carousel/Serie-11.webp" alt="Série" />
+          </div>
+          <div class="c-item">
+            <img src="assets/carousel/Serie-12.webp" alt="Série" />
+          </div>
+          <div class="c-item">
+            <img src="assets/carousel/Serie-13.webp" alt="Série" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="content-section">
+      <div class="container">
+        <div class="sec-label"><i class="fas fa-film"></i> CATÁLOGO</div>
+        <h2 class="sec-title">Um universo de entretenimento</h2>
+        <div class="bento-grid">
+          <div class="bento-item bento-big">
+            <img src="assets/content/FILMES-1.webp" alt="Filmes" />
+            <div class="bento-overlay">
+              <span class="bento-count">40.000+</span>
+              <h3>Filmes</h3>
+              <p>Lançamentos e clássicos</p>
+            </div>
+          </div>
+          <div class="bento-item">
+            <img src="assets/content/SERIES-1.webp" alt="Séries" />
+            <div class="bento-overlay">
+              <span class="bento-count">5.000+</span>
+              <h3>Séries</h3>
+            </div>
+          </div>
+          <div class="bento-item">
+            <img src="assets/content/ESPORTES-1.webp" alt="Esportes" />
+            <div class="bento-overlay">
+              <span class="bento-count">AO VIVO</span>
+              <h3>Esportes</h3>
+            </div>
+          </div>
+          <div class="bento-item">
+            <img src="assets/content/INFANTIL.webp" alt="Infantil" />
+            <div class="bento-overlay">
+              <h3>Infantil</h3>
+            </div>
+          </div>
+          <div class="bento-item">
+            <img src="assets/content/ANIMES-1.webp" alt="Animes" />
+            <div class="bento-overlay">
+              <h3>Animes</h3>
+            </div>
+          </div>
+          <div class="bento-item">
+            <img src="assets/content/ADULTO.webp" alt="Adulto" />
+            <div class="bento-overlay">
+              <span class="bento-count">+18</span>
+              <h3>Adulto</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="save-section">
+      <div class="container">
+        <div class="save-card">
+          <div class="save-left">
+            <div class="sec-label">
+              <i class="fas fa-piggy-bank"></i> ECONOMIZE
+            </div>
+            <h2 class="save-title">
+              Substitua
+              <span class="line-through">17.800kz/Vitalício</span> por
+            </h2>
+            <div class="save-price">
+              <span class="currency"></span>
+              <span class="amount">2</span>
+              <span class="cents">,750<small>/Vitalicio</small></span>
+            </div>
+            <button class="btn-gold" onclick="VipflixApp.scrollToApps()">
+              <i class="fas fa-crown"></i> QUERO ASSINAR
+            </button>
+          </div>
+<div class="save-right">
+            <div class="plat-marquee">
+              <div class="plat-logo" data-name="Netflix">
+                <img src="assets/platforms/IMG1.webp" alt="Netflix" />
+              </div>
+              <div class="plat-logo" data-name="Prime Video">
+                <img src="assets/platforms/IMG2.webp" alt="Prime Video" />
+              </div>
+              <div class="plat-logo" data-name="Max">
+                <img src="assets/platforms/max.webp" alt="Max" />
+              </div>
+              <div class="plat-logo" data-name="Disney+">
+                <img src="assets/platforms/IMG4.webp" alt="Disney+" />
+              </div>
+              <div class="plat-logo" data-name="Paramount+">
+                <img src="assets/platforms/IMG5.webp" alt="Paramount+" />
+              </div>
+              <div class="plat-logo" data-name="Globo Play">
+                <img src="assets/platforms/IMG6.webp" alt="Globo Play" />
+              </div>
+              <div class="plat-logo" data-name="Apple TV">
+                <img src="assets/platforms/IMG7.webp" alt="Apple TV" />
+              </div>
+              <div class="plat-logo" data-name="Crunchyroll">
+                <img src="assets/platforms/IMG8.webp" alt="Crunchyroll" />
+              </div>
+              <div class="plat-logo" data-name="E muito mais!">
+                <img src="assets/platforms/E-MUITO-MAIS.webp" alt="E mais" />
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="promo-section">
+      <div class="container">
+        <div class="promo-banner">
+          <div class="promo-flame"><i class="fas fa-fire"></i></div>
+          <div class="promo-content">
+            <div class="promo-tag">OFERTA POR TEMPO LIMITADO</div>
+            <h2 class="promo-title">
+              Primeiro vitalício por
+              <span class="promo-price">2.750kz</span>
+            </h2>
+            <p class="promo-desc">
+              Assine agora e tenha acesso a todos os conteúdos por apenas
+              <strong>2.750kz</strong> no primeiro vitalício. Depois,
+              <span class="promo-normal">17.800kz/vitalício</span>. Oferta acaba
+              em
+              <span
+                id="promo-countdown"
+                class="sticky-promo-timer"
+                style="font-size: 0.8rem"
+                >00:00:00</span
+              >
+            </p>
+            <div class="promo-benefits">
+              <span><i class="fas fa-check"></i> +40.000 filmes e séries</span>
+              <span><i class="fas fa-check"></i> Canais ao vivo</span>
+              <span><i class="fas fa-check"></i> Cancele quando quiser</span>
+            </div>
+            <button
+              class="btn-gold promo-cta"
+              onclick="VipflixApp.scrollToApps()"
+            >
+              <i class="fas fa-bolt"></i> QUERO POR 2.750kz 
+            </button>
+          </div>
+          <div class="promo-badge-corner">-83%</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="apps-section">
+      <div class="container">
+        <div class="ds-header">
+          <div class="ds-psych-badge">
+            <i class="fas fa-shield-alt"></i> Acesso premium liberado imediatamente após o pagamento.
+          </div>
+          <div class="sec-label">
+            <i class="fas fa-mobile-screen-button"></i> DISPOSITIVO
+          </div>
+          <h2 class="sec-title ds-title">
+            Escolha seu dispositivo<br />antes de assinar
+          </h2>
+          <p class="sec-sub ds-subtitle">
+            Veja rapidamente como funciona em seu aparelho
+          </p>
+        </div>
+
+        <div class="ds-grid">
+          <div
+            class="ds-card"
+            onclick="VipflixDevice.openCategory('smart-tv')"
+            data-category="smart-tv"
+          >
+            <div class="ds-card-glow"></div>
+            <div class="ds-card-inner">
+              <div class="ds-card-icon">
+                <img
+                  src="icones/icone smart tvs.png"
+                  alt="Smart TV"
+                  class="ds-card-icon-img"
+                />
+              </div>
+              <h3>Smart TV</h3>
+              <p class="ds-card-compat">Samsung, LG, Roku</p>
+              <div class="ds-card-apps-count">
+                <i class="fas fa-cube"></i> 4 apps disponiveis
+              </div>
+              <button
+                class="ds-card-btn"
+                onclick="VipflixDevice.openCategory('smart-tv')"
+              >
+                <i class="fas fa-check-circle"></i>
+                SELECIONAR
+              </button>
+              <div class="ds-card-arrow">
+                <i class="fas fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="ds-scroll-hint" id="ds-scroll-hint">
+            <span>Mais dispositivos</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+
+          <div
+            class="ds-card"
+            onclick="VipflixDevice.openCategory('android')"
+            data-category="android"
+          >
+            <div class="ds-card-glow"></div>
+            <div class="ds-card-inner">
+              <div class="ds-card-icon">
+                <img
+                  src="icones/icone dispositivos android.png"
+                  alt="Android"
+                  class="ds-card-icon-img"
+                />
+              </div>
+              <h3>Android</h3>
+              <p class="ds-card-compat">Celular, TV Box, Android TV</p>
+              <div class="ds-card-apps-count">
+                <i class="fas fa-cube"></i> 2 apps disponiveis
+              </div>
+              <button
+                class="ds-card-btn"
+                onclick="VipflixDevice.openCategory('android')"
+              >
+                <i class="fas fa-check-circle"></i>
+                SELECIONAR
+              </button>
+              <div class="ds-card-arrow">
+                <i class="fas fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="ds-card"
+            onclick="VipflixDevice.openCategory('ios')"
+            data-category="ios"
+          >
+            <div class="ds-card-glow"></div>
+            <div class="ds-card-inner">
+              <div class="ds-card-icon">
+                <img
+                  src="icones/icone ios.png"
+                  alt="iOS"
+                  class="ds-card-icon-img"
+                />
+              </div>
+              <h3>iPhone / iPad</h3>
+              <p class="ds-card-compat">iOS 15+, iPadOS</p>
+              <div class="ds-card-apps-count">
+                <i class="fas fa-cube"></i> 2 apps disponiveis
+              </div>
+              <button
+                class="ds-card-btn"
+                onclick="VipflixDevice.openCategory('ios')"
+              >
+                <i class="fas fa-check-circle"></i>
+                SELECIONAR
+              </button>
+              <div class="ds-card-arrow">
+                <i class="fas fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ds-confirmed" id="ds-confirmed" style="display: none">
+          <div class="ds-confirmed-inner">
+            <div class="ds-confirmed-check">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="ds-confirmed-info">
+              <span class="ds-confirmed-label">Dispositivo escolhido</span>
+              <strong id="ds-confirmed-name">---</strong>
+            </div>
+            <button
+              class="ds-confirmed-change"
+              onclick="VipflixDevice.resetChoice()"
+            >
+              <i class="fas fa-pen"></i> Alterar
+            </button>
+          </div>
+          <button
+            class="ds-btn-generate"
+            id="ds-btn-generate"
+            onclick="VipflixDevice.goToForm()"
+          >
+            <i class="fas fa-rocket"></i> CONTINUAR PARA PAGAMENTO
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="ds-modal" id="ds-modal">
+      <div class="ds-modal-overlay" onclick="VipflixDevice.closeModal()"></div>
+      <div class="ds-modal-container">
+        <button class="ds-modal-close" onclick="VipflixDevice.closeModal()">
+          <i class="fas fa-times"></i>
+        </button>
+
+        <div class="ds-modal-cat-header" id="ds-modal-cat-header">
+          <div class="ds-modal-cat-icon"><i class="fas fa-tv"></i></div>
+          <div>
+            <h3 id="ds-modal-cat-title">Smart TV</h3>
+            <p id="ds-modal-cat-sub">Escolha o melhor app para sua TV</p>
+          </div>
+        </div>
+
+        <div class="ds-modal-apps" id="ds-modal-apps"></div>
+      </div>
+    </div>
+
+    <div class="ds-detail-modal" id="ds-detail-modal">
+      <div class="ds-modal-overlay" onclick="VipflixDevice.closeDetail()"></div>
+      <div class="ds-detail-container">
+        <button class="ds-modal-close" onclick="VipflixDevice.closeDetail()">
+          <i class="fas fa-times"></i>
+        </button>
+
+        <div class="ds-detail-body">
+          <div class="ds-detail-header">
+            <img id="ds-detail-img" src="" alt="" class="ds-detail-app-img" />
+            <div>
+              <h3 id="ds-detail-name">App Name</h3>
+              <div class="ds-detail-badges" id="ds-detail-badges"></div>
+            </div>
+          </div>
+
+          <div class="ds-detail-compat">
+            <h4><i class="fas fa-check-double"></i> Compativel com</h4>
+            <div class="ds-detail-compat-list" id="ds-detail-compat"></div>
+          </div>
+
+          <div class="ds-detail-steps">
+            <h4><i class="fas fa-list-ol"></i> Como usar</h4>
+            <ol id="ds-detail-steps-list"></ol>
+          </div>
+
+          <div
+            class="ds-detail-warning"
+            id="ds-detail-warning"
+            style="display: none"
+          >
+            <i class="fas fa-exclamation-triangle"></i>
+            <span id="ds-detail-warning-text"></span>
+          </div>
+
+          <div class="ds-detail-actions">
+            <button
+              class="ds-btn-choose"
+              id="ds-btn-choose"
+              onclick="VipflixDevice.confirmApp()"
+            >
+              <i class="fas fa-check"></i> ESCOLHER ESTE DISPOSITIVO
+            </button>
+            <button class="ds-btn-other" onclick="VipflixDevice.closeDetail()">
+              <i class="fas fa-arrow-left"></i> Ver outro app
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-form">
+      <div class="modal-overlay" onclick="VipflixApp.closeModal()"></div>
+      <div class="modal-box">
+        <button class="modal-close" onclick="VipflixApp.closeModal()">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="modal-head">
+          <div id="modal-app-preview"></div>
+          <h3>Finalizar Assinatura</h3>
+          <p class="modal-sub">Preencha abaixo para prosseguir</p>
+          <div class="urgency-badge">
+            <i class="fas fa-fire"></i> Últimas
+            <span id="remaining-tests">7</span> vagas hoje!
+          </div>
+          <div class="social-proof">
+            <span
+              ><i class="fas fa-users"></i>
+              <strong>2.847</strong> assinaram</span
+            >
+            <span><i class="fas fa-star"></i> <strong>4.9</strong>/5</span>
+          </div>
+        </div>
+        <form
+          id="checkout-form"
+          action="javascript:void(0)"
+          onsubmit="return VipflixApp.processPayment(event);"
+        >
+          <div class="form-field">
+            <label for="nome"><i class="fas fa-user"></i> Nome Completo</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              required
+              placeholder="Seu nome"
+              autocomplete="name"
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="whatsapp"
+              ><i class="fab fa-whatsapp"></i> WhatsApp</label
+            >
+            <input
+              type="tel"
+              id="whatsapp"
+              name="whatsapp"
+              required
+              placeholder="Seu número"
+              autocomplete="tel"
+            />
+          </div>
+
+          <div class="form-field">
+            <label for="country"
+              ><i class="fas fa-globe"></i> País e Pagamento</label
+            >
+            <select
+              id="country"
+              name="country"
+              required
+              style="
+                width: 100%;
+                padding: 12px;
+                border-radius: 6px;
+                background: #1a1a1a;
+                color: #fff;
+                border: 1px solid #333;
+                outline: none;
+              "
+            >
+              <option value="" disabled selected>Selecione seu país...</option>
+              <option value="AO">Angola (2.750 Kz)</option>
+              <!--<option value="MZ">Moçambique (200 MZN)</option>-->
+            </select>
+          </div>
+
+          <input type="hidden" id="app-selected" name="app-selected" />
+
+          <button type="submit" class="btn-submit" id="btn-submit">
+            <i class="fas fa-rocket"></i> <span>IR PARA PAGAMENTO</span>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-result">
+      <div class="modal-overlay" onclick="VipflixApp.closeResultModal()"></div>
+      <div class="modal-box result-box">
+        <button class="modal-close" onclick="VipflixApp.closeResultModal()">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="result-header">
+          <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+          <h3>Redirecionando...</h3>
+        </div>
+        <div id="result-details"></div>
+      </div>
+    </div>
+
+    <div id="floating-cta" class="floating-cta">
+      <button onclick="VipflixApp.scrollToApps()">
+        <i class="fas fa-play"></i>
+        <span>ASSINAR AGORA</span>
+        <small>1º vitalício 2.750kz</small>
+      </button>
+    </div>
+
+    <div id="social-proof-popup" class="social-proof-popup"></div>
+
+    <div id="exit-popup" class="exit-popup">
+      <div
+        class="exit-popup-overlay"
+        onclick="
+          document.getElementById('exit-popup').classList.remove('active')
+        "
+      ></div>
+      <div class="exit-popup-box">
+        <button
+          class="exit-popup-close"
+          onclick="
+            document.getElementById('exit-popup').classList.remove('active')
+          "
+        >
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="exit-popup-icon"><i class="fas fa-gift"></i></div>
+        <h3>Espera! Tem certeza?</h3>
+        <p>
+          Você está perdendo a chance de ter
+          <strong>+40.000 filmes e séries</strong> por apenas
+        </p>
+        <div class="exit-popup-price">
+          2.750kz <small>/1º vitalício</small>
+        </div>
+        <p class="exit-popup-sub">Acesso imediato a todo o catálogo.</p>
+        <button
+          class="exit-popup-cta"
+          onclick="
+            VipflixApp.scrollToApps();
+            document.getElementById('exit-popup').classList.remove('active');
+          "
+        >
+          <i class="fas fa-rocket"></i> QUERO ASSINAR AGORA
+        </button>
+        <span
+          class="exit-popup-dismiss"
+          onclick="
+            document.getElementById('exit-popup').classList.remove('active')
+          "
+          >Não, obrigado</span
+        >
+      </div>
+    </div>
+
+    <footer id="footer">
+      <div class="footer-inner">
+        <img
+          src="assets/logo/logo_vipflix.png"
+          alt="VIPFLIX"
+          class="footer-logo"
+        />
+        <p>Liberação imediata &middot; Cancele quando quiser</p>
+        <div class="footer-links">
+          <a href="" target="_blank"><i class="fab fa-whatsapp"></i> Suporte</a>
+        </div>
+        <p class="copyright">&copy; 2026 VIPFLIX</p>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+      onerror="
+        console.warn('Supabase CDN falhou - site funciona sem analytics')
+      "
+    ></script>
+    <script src="supabase.js"></script>
+    <script src="analytics.js"></script>
+    <script src="facebook-pixel.js"></script>
+    <script src="telegram.js"></script>
+    <script src="carousel.js"></script>
+    <script src="particles.js"></script>
+    <script src="device-selection.js"></script>
+    <script src="conversion-boost.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
